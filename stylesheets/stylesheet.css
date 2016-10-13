@@ -51,7 +51,7 @@ Theme Styles
 body {
   box-sizing: border-box;
   color:#373737;
-  font-size: 16px;
+  font-size: 26px;
   font-family: 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 46px;
   font-weight: 700;
 }
 
@@ -77,7 +77,7 @@ h2 {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 34px;
 }
 
 h4 {
