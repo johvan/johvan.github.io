@@ -1,0 +1,135 @@
+!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Grid test</title>
+</head>
+
+<body>
+  <canvas id="canvas" width="800" height="800" style="background-color: #f8a;"></canvas>
+  <script id="jsbin-javascript">
+
+(function() {
+
+  "use strict";
+
+  let canvas = document.getElementById("canvas");
+  let ctx    = canvas.getContext("2d");
+
+  let fill  = function(x = 170, y = 130) {
+       ctx.save();
+       ctx.fillStyle = '#515254';
+       ctx.fillRect(x,y,25,85);
+       ctx.restore();
+   }
+  let line = function(){
+      ctx.save(); //Pushs onto Stack
+      ctx.strokeStyle = '#515254';
+      ctx.beginPath();
+      ctx.moveTo(1,1);
+      ctx.lineWidth = 15;
+      ctx.lineCap = "round"; //`round``sqaure``butt`
+      ctx.lineTo(250, 250);
+      ctx.lineJoin = "mitter"; //`round``mitter``bebel`
+      ctx.lineTo(250, 500);
+      ctx.stroke();
+      ctx.restore(); //Removes from stack
+  }
+
+  let dLine = function(x, y){
+      ctx.save();
+      ctx.strokeStyle = 'red';
+      ctx.setLineDash([5, 15]);
+      ctx.beginPath();
+      ctx.lineWidth = 10;
+      ctx.moveTo(x, y);
+      ctx.lineTo(300, 300);
+      ctx.stroke();
+      ctx.restore();
+  }
+  let circle = function(x,y){
+      ctx.save();
+      ctx.fillStyle = '#7D26CD';
+      ctx.beginPath();
+      ctx.arc(x, y, 50, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.restore();
+  }
+  let animate = function(){};
+       var xPos = 300;
+       var yPos = 300;
+       var width = 50;
+       var height = 50;
+       var pos = [];
+  // 
+  function generateGrid(array, num, randNum, randNum2){
+     if(Array.isArray(array) || Object.prototype.toString.call(array) === "[object Array]"){
+        array.push(Math.floor((Math.random() * randNum) + randNum2));
+      if(array.length <= num){
+          generateGrid(array, num, randNum, randNum2);   
+       }
+    }
+  };
+  var dum = [];
+  console.log(generateGrid(dum, 16, 2, 0));
+  console.log(dum);
+   
+  function drawGrid(){
+     var grid = [
+         0,0,0,1,
+         0,1,1,0,
+         0,1,1,0,
+         1,0,0,0
+       ];
+
+       grid.forEach(function(ele, index,array){
+         if(ele === 0){
+           ctx.fillStyle = `#fa1`;
+           ctx.fillRect(xPos, yPos, width, height);
+            pos.push({
+             x: xPos,
+             y: yPos,
+             w: width,
+             h: height
+           });
+          } else if(ele === 1){
+           ctx.fillStyle = 'blue';
+           ctx.fillRect(xPos, yPos, 50, 50);
+         }
+           xPos += 50;
+         if(index === 3){
+           xPos = 300;
+           yPos += 50;
+         } else if(index === 7){
+           xPos = 300;
+           yPos += 50;
+        } else if(index === 11){
+           xPos = 300;
+           yPos += 50;
+         }
+       });// end of `forEach`
+      // If it dosen't work try drawing 4 sepearte rows.
+       canvas.onclick = function(e){
+          var x = event.clientX;
+          var y = event.clientY;
+          for(var i = 0; i < pos.length; i +=1){
+            //This works because of `x < pos[i].x + pos[i].w`.
+             if(x >= pos[i].x && x <= pos[i].x + pos[i].w
+                && y >= pos[i].y && y <= pos[i].y + pos[i].h)
+                {
+                    ctx.clearRect(pos[i].x, pos[i].y,
+                                  pos[i].w, pos[i].h);
+              } // end if `if`
+           } // end of `for`
+         } //end of `onclick`
+       }; // end of `drawGrid`
+
+  drawGrid();
+}());
+
+
+</script>
+</body>
+
+</html>
