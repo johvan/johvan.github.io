@@ -1,8 +1,16 @@
 # School Web Projects
-www.google.com
+
 ```javascript
-var x = 2;
-var y = 2;
-console.log("X poistion:" + x, "Y poistion:" + y);
+var Projects = {
+  Willis and Walker: "working",
+  SoccerLight: "working",
+  KidGeographic: "working",
+  Giggle: "working",
+  SoccerLight magazine: "working",
+  Taptap: "working",
+  Ai Search: "working",
+  Planet Explorer: "working",
+  Drawing App: "workinjg", 
+}
 ```
 
