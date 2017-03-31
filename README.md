@@ -1,6 +1,4 @@
-# johvan.github.io
-School Project
-
+# School Web Projects
 ```javascript
 var x = 2;
 var y = 2;
