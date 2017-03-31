@@ -1,6 +1,5 @@
 # johvan.github.io
 School Project
-<hr>
 
 ```javascript
 var x = 2;
