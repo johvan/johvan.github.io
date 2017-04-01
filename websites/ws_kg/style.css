@@ -1,0 +1,234 @@
+ @font-face {
+   font-family: "teko";
+   src: url("fonts/Teko-Regular.ttf");
+ }
+  @font-face {
+   font-family: "teko-bold";
+   src: url("fonts/Teko-Bold.ttf");
+ }
+
+ .move-up{
+   border-radius: 12px; 
+   top: -80px;
+   position: relative;
+ }
+ 
+ * {
+   transition: 600ms;
+ }
+ 
+ html,
+ body {
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   background: #ededed;
+   width: 100%;
+   height: 100%;
+ }
+ 
+ header {
+   width: 100%;
+   height: 50px;
+   text-align: center;
+   background: #1f1e1c;
+   display: block;
+ }
+ header img{
+   top: 9px;
+   position: relative;
+ }
+ 
+ .main {
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   position: relative;
+   color: #a5723d;
+ }
+ .main a {
+   font-size: 28px;
+   letter-spacing: 2px;
+   color: #fff;
+   font-family: "teko"; 
+ }
+ 
+ .animal1 {
+   background: lawngreen;
+   background-image: url("imgs/lion.jpg");
+   background-position: center center;
+   background-size: 400% 100%;
+   background-repeat: no-repeat;
+ }
+ 
+ .animal2 {
+   background-image: url("imgs/cheetah.jpg");
+   background-position: center center;
+   background-size: 400% 100%;
+   background-repeat: no-repeat;
+ }
+ 
+ .animal3 {
+   background: indigo;
+   background-image: url("imgs/wolf.jpg");
+   background-position: center center;
+   background-size: 400% 100%;
+   background-repeat: no-repeat;
+ }
+ 
+ .animal4 {
+   background: lightcoral;
+   background-image: url("imgs/tiger.jpg");
+   background-position: center center;
+   background-size: 400% 100%;
+   background-repeat: no-repeat;
+ }
+ 
+ .animal5 {
+   background: navy;
+   background-image: url("imgs/eagle.jpg");
+   background-position: center center;
+   background-size: 400% 100%;
+   background-repeat: no-repeat;
+ }
+ 
+ .animal1,
+ .animal2,
+ .animal3,
+ .animal4,
+ .animal5 {
+   cursor: pointer;
+   float: left;
+   width: 20%;
+   min-height: 100%;
+ }
+ .animal1:hover,
+ .animal2:hover,
+ .animal3:hover,
+ .animal4:hover,
+ .animal5:hover {
+   opacity: .30;
+ }
+ .lion{
+   background-image: url("imgs/lion.jpg"); 
+   background-position: center 0px; 
+   background-size: 100% 200%;
+   background-repeat: no-repeat;
+ }
+ .lion-theme{
+   background: #a5723d;
+   color: #fff;
+ }
+ .subhead{
+   text-align: center;
+   font-family: "teko-bold";
+   width: 100%;
+   height: 500px;
+ }
+ .subhead h1{
+   font-size: 144px;
+   margin: 0;
+ }
+ .subhead h2{
+bottom: 50px;
+  position: relative;
+   margin: 0;
+ }
+ .subcontent{
+   position: relative;
+   top: 100px;
+ }
+ .text{
+   padding: 1em;
+   letter-spacing: 1px;
+   font-size: 24px;
+   font-family: "teko";
+ }
+ .text p:first-child:first-letter {
+  color: #f3bf15; 
+  font-family: Georgia;
+  font-size: 62px;
+}
+ .container {
+   width: 1000px;
+   margin: 0 auto;
+   position: relative;
+   display: block;
+ }
+ 
+ .container .links::after {
+   content: "";
+   clear: both;
+   display: block;
+ }
+ 
+ footer {
+   font-family: "teko";
+   letter-spacing: 1px;
+   color: #fff;
+   width: 100%;
+   background-color: #1f1e1c;
+   display: block;
+ }
+ footer input[type=text]{
+   border: none;
+    padding: 10px;
+    border-radius: 6px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+ }
+ footer button{
+   background-color: #f3bf15;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+   color: #000;
+   padding-right: 10px;
+   padding-top: 9px;
+   padding-bottom: 7px;
+   font-family: "teko";
+   border: none;
+
+ }
+ footer .box2 {
+   width: 250px;
+   float: left;
+ }
+ 
+ .box2 h2 {
+
+   font-weight: 300;
+ }
+ 
+ .box2 p {
+   
+   font-weight: 100;
+ }
+ 
+ .box2 input[field=text],
+ .box2 button {
+   display: inline-block;
+ }
+ 
+ .info {
+   text-align: center;
+   position: relative;
+ }
+ 
+ .info a {
+   font-family: "PTsans";
+   text-transform: uppercase;
+   text-decoration: none;
+   color: #fff;
+ }
+ /*You are using Gucci header*/
+ /**/
+ 
+ @media screen and (max-width: 540px) {
+
+ }

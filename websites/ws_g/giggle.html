@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by anonymous (http://jsbin.com/xotuciqije/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Giggle Co.</title>
+  <style id="jsbin-css">
+    @font-face {
+      font-family: "V";
+      src: url("fonts/VinylCuts.ttf");
+    }
+    
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background: red;
+    }
+    
+    .container {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      position: relative;
+      background: plum;
+    }
+    
+    #a {
+      width: 500%;
+      height: 100%;
+      left: 0;
+      transition: 0.50s;
+      background: lightblue;
+      position: relative;
+    }
+    
+    .a1 {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 20%;
+      min-height: 100%;
+      background: #9280f9;
+      position: relative;
+    }
+    
+    .a2 {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 20%;
+      min-height: 100%;
+      background: #2fabf9;
+      position: relative;
+    }
+    
+    .a3 {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 20%;
+      min-height: 100%;
+      background: #3bdb29;
+      position: relative;
+    }
+    
+    .a4 {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 20%;
+      min-height: 100%;
+      background: #D90368;
+      position: relative;
+    }
+    
+    .a5 {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 20%;
+      min-height: 100%;
+      background: #db2e29;
+      position: relative;
+    }
+    
+    .cloud {
+      background: url("imgs/cloud.png");
+      /*background-size: 100% 200px;
+      background-repeat: no-repeat;*/
+      width: 100%;
+      height: 280px;
+      bottom: 0;
+      position: absolute;
+    }
+    
+    .cloud img {
+      max-width: 100%;
+    }
+    
+    .a1,
+    .a2,
+    .a3,
+    .a4,
+    .a5 {
+      float: left;
+    }
+    
+    .pic1,
+    .pic2,
+    .pic3,
+    .pic4,
+    .pic5 {
+      background-repeat: no-repeat;
+      float: left;
+      width: 50%;
+      height: 100%;
+    }
+    
+    section .pic1 {
+      background-image: url("imgs/kid5.png");
+      background-size: 70% 90%;
+      /*background: lightseagreen;*/
+    }
+    
+    section .pic2 {
+      background-image: url("imgs/kid6.png");
+      background-size: 70% 90%;
+      /*background: lightseagreen;*/
+    }
+    
+    section .pic3 {
+      background-image: url("imgs/kid11.png");
+      background-size: 70% 90%;
+      /*background: lightseagreen;*/
+    }
+    
+    section .pic4 {
+      background-image: url("imgs/kid7.png");
+      background-size: 70% 90%;
+      /*background: lightseagreen;*/
+    }
+    
+    section .pic5 {
+      background-image: url("imgs/kid5.png");
+      background-size: 70% 90%;
+      /*background: lightseagreen;*/
+    }
+    
+    section .text h1 {
+      margin: 0;
+    }
+    
+    section .text {
+      font-family: "V";
+      font-size: 22px;
+      float: left;
+      width: 50%;
+      height: 100%;
+      color: #fff;
+    }
+    
+    section .text p {
+      text-align: left;
+      width: 95%;
+      position: relative;
+      display: block;
+    }
+    
+    section {
+      width: 1000px;
+      height: 500px;
+      display: block;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    
+    .end {
+      text-align: center;
+      font-family: "V";
+      font-size: 22px;
+      width: 100%;
+      color: #fff;
+    }
+    .end h1{
+      margin: 10px;
+      font-size: 70px;
+    }
+    
+    .end p {
+      margin: 5px;
+      font-size: 45px;
+      display: inline-block;
+    }
+    
+    #a::after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+    
+    header {
+      text-align: center;
+      width: 100%;
+      height: 60px;
+      position: absolute;
+      z-index: 99999;
+    }
+    
+    header .content {
+      width: 200px;
+      display: inline-block;
+    }
+    
+    header h1 {
+      font-family: "V";
+      display: inline-block;
+      bottom: 12px;
+      position: relative;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="content">
+        <img src="imgs/logo.png" width="50" height="50" />
+        <h1>GIGGLE</h1>
+      </div>
+    </header>
+    <div id="a">
+      <div class="a1">
+        <section id="group">
+          <div class="pic1">
+          </div>
+          <div class="text">
+            <h1>About</h1>
+            <p>
+              Giggle is a software company dedicated to making apps for kids. We have a diverse team full talented people, from all over
+              the world. Which of whom, all have a passion for helping children. We are located in Long Island, New York.
+              The difference between Giggle and other software companys, is the aim to help children learn and let them be
+              creative.
+            </p>
+          </div>
+        </section>
+        <div class="cloud">
+        </div>
+      </div>
+      <div class="a2">
+        <section id="group">
+          <div class="pic2">
+          </div>
+          <div class="text">
+            <h1>About</h1>
+            <p>
+              Giggle is a software company dedicated to making apps for kids. We have a diverse team full talented people, from all over
+              the world. Which of whom, all have a passion for helping children. We are located in Long Island, New York.
+              The difference between Giggle and other software companys, is the aim to help children learn and let them be
+              creative.
+            </p>
+          </div>
+        </section>
+        <div class="cloud">
+        </div>
+      </div>
+      <div class="a3">
+        <section id="group">
+          <div class="pic3">
+          </div>
+          <div class="text">
+            <h1>About</h1>
+            <p>
+              Giggle is a software company dedicated to making apps for kids. We have a diverse team full talented people, from all over
+              the world. Which of whom, all have a passion for helping children. We are located in Long Island, New York.
+              The difference between Giggle and other software companys, is the aim to help children learn and let them be
+              creative.
+            </p>
+          </div>
+        </section>
+        <div class="cloud">
+        </div>
+      </div>
+      <div class="a4">
+        <section id="group">
+          <div class="pic4">
+          </div>
+          <div class="text">
+            <h1>About</h1>
+            <p>
+              Giggle is a software company dedicated to making apps for kids. We have a diverse team full talented people, from all over
+              the world. Which of whom, all have a passion for helping children. We are located in Long Island, New York.
+              The difference between Giggle and other software companys, is the aim to help children learn and let them be
+              creative.
+            </p>
+          </div>
+        </section>
+        <div class="cloud">
+        </div>
+      </div>
+      <div class="a5">
+        <section id="group">
+          <div class="end">
+            <h1>Find Us</h1>
+            <p>Facebook</p>
+            <p>Instagram</p>
+            <p>Twitter</p>
+            <p>Youtube</p>
+            <p>Snapchat</p>
+          </div>
+        </section>
+        <div class="cloud">
+        </div>
+      </div>
+    </div>
+    <button id="l">left</button>
+    <button id="r">rigt</button>
+  </div>
+  <script id="jsbin-javascript">
+(function(){
+var left  =  document.getElementById("l");
+var right =  document.getElementById("r");
+var a     =  document.getElementById("a");
+var temp = 0;
+  
+left.addEventListener("click",function() {
+  
+  return (function(){
+    temp += 100;
+    a.style.left = temp +"%";
+    console.log(temp);
+  }());
+}, false);
+
+  right.addEventListener("click",function() {
+
+ 
+  return (function(){
+    temp -= 100;
+    a.style.left = temp +"%";
+    console.log(temp);
+  }());
+  
+}, false);
+
+}());
+</script>
+</body>
+
+</html>

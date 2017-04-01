@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta author="Johvan Wyke">
+    <meta name="" content="Code">
+    <meta name="Giggle" content="App">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <title>Giggle Co.</title>
+</head>
+<body>
+    <div id="icon">
+        <a href="home.html">
+             <img src="logo.png" width="50" height="50" />
+        </a>
+    </div>
+           <div class="navi" style="display: none;">
+                <div class="i">
+                    <a href="home.html"><img src="logo.png" width="50" height="50" /></a>
+                </div>
+            </div>
+     
+    <div id="content"  ng-controller="myCtrl">
+       <canvas id="game" app></canvas>
+    </div>
+    <div class="ui-game" ng-controller="ui">
+        <nav style="display: block;" >
+            <div class="color red"    ng-click=""></div>
+            <div class="color blue"   ng-click=""></div>
+            <div class="color yellow" ng-click=""></div>
+            <div class="color green"  ng-click=""></div>    
+            <div class="color purple" ng-click=""></div>
+            <div class="color orange" ng-click=""></div>
+            <div class="color eraser"></div>
+        </nav>
+    </div> 
+ 
+ <!--</div>-->
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/angular-animate.js"></script>
+    
+    <script src="main.js"></script>
+</body>
+</html>

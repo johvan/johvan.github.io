@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="App">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta author="Johvan Wyke">
+    <meta name="" content="Code">
+    <meta name="Giggle" content="App">
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <title>Giggle Co.</title>
+</head>
+
+<body>
+    <div id="icon">
+        <a href="home.html">
+            <img src="logo.png" width="50" height="50" />
+        </a>
+    </div>
+        <div class="navi" style="display: none;">
+            <div class="i">
+                <a href="home.html"><img src="logo.png" width="50" height="50" /></a>
+            </div>
+        </div>
+        <div id="main" ng-controller="myGame as taptap">
+            <canvas id="game">
+            </canvas>
+            <div class="game_menu">
+                <div class="play ui" data-ng-click="taptap.play()">PLAY</div>
+                <div class="info ui" data-ng-click="taptap.Info()">INFO</div>
+                <div class="help ui" data-ng-click="taptap.Help()">HELP</div>
+                </div>
+                 <div class="stuff">
+                         <p>
+                            <span class="back"  data-ng-click="taptap.close()">BACK</span>
+                            <h1>Lead Artist:</h1> 
+                            <span>Johvan Wyke</span>
+                            <h1>Lead Developer:</h1> 
+                            <span>Johvan Wyke</span>
+                            <h1>Lead Writer:</h1> 
+                            <span>Johvan Wyke</span>
+                            <h1>Sound Designer:</h1> 
+                            <span>Johvan Wyke</span>
+                        </p>
+                  </div>
+                <div class="stuff2">
+                        <p>
+                            <span class="back"  data-ng-click="taptap.close()">BACK</span>
+                            <h1>How to play</h1>
+                            <p>Click or tap all the colors to procced to the next level.</p>
+                            <p>If you click the grey boxes nothing will happen.</p> 
+                        </p>
+                     </div>
+          <div class="pause">
+               <h1 data-ng-click="taptap.open()">menu</h1>
+               <!--<h1 data-ng-click="taptap.open()">close</h1>-->
+               <img  data-ng-click="taptap.pause()" src="sound.png" width="50" height="50" />
+          </div>
+        </div>
+    <script src="../../scripts/angular.js"></script>
+    <script src="../../scripts/angular-route.js"></script>
+    <script src="../../scripts/angular-animate.js"></script>
+    <script src="../app.module.js"></script>
+    <script src="taptap.controller.js"></script>
+</body>
+
+</html>

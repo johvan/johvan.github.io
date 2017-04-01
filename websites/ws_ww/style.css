@@ -1,0 +1,363 @@
+ @font-face {
+   font-family: "PTsans";
+   src: url("./fonts/PTsans/PT_Sans-Web-Regular.ttf");
+ }
+ 
+ @font-face {
+   font-family: "PTsans-Bold";
+   src: url("./fonts/PTsans/PT_Sans-Web-Bold.ttf");
+ }
+ 
+ @font-face {
+   font-family: "PTserif";
+   src: url("./fonts/PTSerif/PT_Serif-Web-Regular.ttf");
+ }
+
+ * {
+   transition: 600ms;
+ }
+
+ html,
+ body {
+   box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   background: #ededed;
+ }
+
+ .header::after{
+   content:"";
+   clear: both;
+   display: block;
+ }
+ .header {
+   color: #fff;
+   text-align: center;
+   width: 100%;
+   background-color: #141414;
+ }
+ .header ul{
+   margin: 0;
+ }
+ .header li{
+   float: left;
+   list-style-type:  none;
+ }
+ .header ul:nth-child(1){
+color: red;
+ }
+ 
+ .main {
+   width: 100%;
+   background: #eee;
+   margin: 0 auto;
+ }
+ 
+ .sub1 {
+   background: url("imgs/m.png");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: 0px 0px;
+   font-family: "PTserif";
+   float: left;
+   width: 50%;
+   height: 500px;
+   display: block;
+   position: relative;
+ }
+ 
+ .sub2 {
+   background: url("imgs/w.png") center;
+   background-size: cover;
+    
+   background-position: 100%;
+   font-family: "PTserif";
+   float: left;
+   width: 50%;
+   height: 500px;
+   display: block;
+   position: relative;
+ }
+ 
+ .sub1:hover,
+ .sub2:hover {
+   cursor: pointer;
+   opacity: .30;
+ }
+ 
+ .sub1 h1,
+ .sub2 h1 {
+   margin-top: 0px;
+   font-weight: 100;
+   margin-left: 15px;
+   margin-bottom: 0px;
+   font-size: 74px;
+   color: #fff;
+ }
+ 
+ .sub1 h2,
+ .sub2 h2 {
+   font-weight: 100;
+   margin-left: 15px;
+   margin-top: 0px;
+   color: #fff;
+ }
+ 
+ .nav {
+   background-color: #141414;
+   text-align: center;
+ }
+ 
+ .nav a {
+   font-size: 1.2em;
+   text-decoration: none;
+   font-family: "PTsans";
+   color: #fff;
+   padding: 15px;
+   display: inline-block;
+ }
+ 
+ 
+ .nav a:hover {
+   opacity: .20;
+ }
+ 
+ .feature {
+   position: relative;
+ }
+ 
+ .headline {
+   display: block;
+ }
+ 
+ .headline h1 {
+   font-family: "PTserif";
+   display: inline-block;
+ }
+ 
+ .headline span {
+   bottom: 5px;
+   margin-left: 5px;
+   display: inline-block;
+   width: 22px;
+   height: 4px;
+   background-color: #000;
+   position: relative;
+ }
+ 
+ .container .product::after {
+   content: "";
+   clear: both;
+   display: block;
+ }
+ 
+ .container {
+   width: 1000px;
+   margin: 0 auto;
+   position: relative;
+   display: block;
+ }
+ 
+ .container .box {
+   float: left;
+   width: 200px;
+ }
+ 
+ .container .box img {
+   max-width: 100%;
+ }
+ /*Product Page*/
+ 
+ .view {
+   position: relative;
+   width: 100%;
+ }
+ 
+ .v1,
+ .v2 {
+   display: inline-block;
+   margin-right: -4px;
+   padding: 0;
+   width: 50%;
+   height: 130px;
+   position: relative;
+ }
+ 
+ .head {
+   text-align: center;
+ }
+ 
+ .head h1 {
+   font-size: 18px;
+   font-family: "PTserif";
+ }
+ 
+ .head p {
+   margin-top: 0px;
+   font-size: 20px;
+ }
+ 
+ .picker {
+   width: 100%;
+   text-align: center;
+ }
+ 
+ .add {
+   margin-top: 15px;
+   text-align: center;
+   color: #fff;
+   font-family: "PTsans-Bold";
+   font-weight: 300;
+   letter-spacing: 1px;
+   padding: 15px;
+   background-color: #000;
+ }
+ 
+ .bio {
+   margin-top: 30px;
+ }
+ 
+ .bio h2 {
+   line-height: 1px;
+   margin-bottom: 0px;
+   font-family: "PTserif";
+   font-weight: 100;
+ }
+ 
+ .bio p {
+   font-family: "PTsans";
+ }
+ 
+ .rate {
+   width: 100%;
+ }
+ 
+ .rate span {
+   line-height: 25px;
+   text-align: center;
+   display: inline-block;
+   border-radius: 50%;
+   width: 25px;
+   height: 25px;
+   background: gold;
+   color: #fff;
+ }
+ 
+ .container .ext1 {
+   width: 54%;
+   margin: 0 auto;
+   position: relative;
+ }
+ 
+ .container .ext2 {
+   margin-right: 15px;
+   width: 250px;
+ }
+ 
+ .container .ext2 img {
+   width: 100%;
+   height: 100%;
+ }
+ .box3 .relate h2{
+   font-family: "PTserif";
+   text-align: center;
+ }
+ .box3 .relate {
+   margin: 0 auto;
+   width: 54%;
+ 
+ }
+ 
+ .box3 .relate1 {
+   width: 50%;
+   float: left;
+  ;
+ }
+ 
+ 
+ .box3 .relate1 img {
+   margin-right: -4px;
+   margin-bottom: -4px;
+   width: 135px;
+   height: 170px;
+ }
+ 
+ .box3 .relate2 {
+   float: left;
+ }
+ 
+ .box3 .relate2 img {
+   width: 270px;
+   height: 340px;
+ }
+ 
+ .container .relate::after {
+   content: "";
+   clear: both;
+   display: block;
+ }
+ /*End of Product Page*/
+ 
+ .container .links::after {
+   content: "";
+   clear: both;
+   display: block;
+ }
+ 
+ footer {
+   margin-top: 200px;
+   color: #fff;
+   width: 100%;
+   background-color: #141414;
+   display: block;
+ }
+ 
+ footer .box2 {
+   width: 250px;
+   float: left;
+ }
+ 
+ .box2 h2 {
+   font-family: "PTsans";
+   font-weight: 300;
+ }
+ 
+ .box2 p {
+   font-family: "PTsans";
+   font-weight: 100;
+ }
+ 
+ .box2 input[field=text],
+ .box2 button {
+   display: inline-block;
+ }
+ 
+ .info {
+   padding-top: 50px;
+   padding-bottom: 20px;
+   text-align: center;
+   position: relative;
+ }
+ 
+ .info a {
+   font-family: "PTsans";
+   text-transform: uppercase;
+   text-decoration: none;
+   color: #fff;
+ }
+ /*You are using Gucci header*/
+ /**/
+ 
+ @media screen and (max-width: 540px) {
+   .sub1,
+   .sub2 {
+     text-align: center;
+     width: 100%;
+     float: none;
+   }
+   .sub2 h1 {
+     margin: 0;
+   }
+ }
