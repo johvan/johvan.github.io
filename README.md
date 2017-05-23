@@ -3,7 +3,7 @@
 ```javascript
 let Projects = {
   Willis and Walker: "working",
-  SoccerLight: "Not Avaible",
+  SoccerLight: "Not available",
   KidGeographic: "working",
   Giggle: "working",
   SoccerLight magazine: "working",
