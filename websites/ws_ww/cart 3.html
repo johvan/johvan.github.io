@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by anonymous (http://jsbin.com/qabepotixu/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+*{
+  transition: 500ms;
+  margin: 0;
+  font-family: "roboto";
+  font-weight: 200;
+}
+.con::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+hr{
+  width: 40px;
+}
+.con{
+   border: 0.10px red solid;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+}
+h1{
+  border-bottom: 1px solid blue;
+}
+.side{
+  float: left;
+  border-right: 1px solid blue;
+  width: 99px;
+  height: 200px;
+  background-color: #eee;
+  position: relative;
+}
+.main{
+  float: left;
+  width: 400px;
+  height: 400px;
+  background-color: #eee;
+  position: relative;
+}
+.group{
+  float: right;
+  background-color: red;
+  width: 52px;
+  position: relative;
+}
+
+.product1,.product2,.product3,.product4{
+   cursor: pointer;
+  margin: 1px;
+  width: 50.33px;
+  height: 50px;
+  position: relative;
+}
+.p1,.p2,.p3,.p4{
+  width: 50.33px;
+  height: 50px;
+  position: relative;
+}
+.product1{
+  right: 0;
+  background-color: blue;
+}
+
+.product2{
+  background-color: yellow;
+}
+
+.product3{
+  background-color: green;
+}
+
+.product4{
+ 
+  background-color: pink;
+}
+.p4{
+  text-align: center;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background: orange;
+}
+.p4-stay{
+  font-size: 10px;
+  text-align: center;
+}
+
+
+.remove{
+	background-color: red;
+	padding: 25px;
+}
+
+
+
+</style>
+</head>
+<body>
+  <div class="con">
+    <div class="side">
+      <h1>Cart</h1>
+      <div class="remove">Remove</div>
+    </div>
+    <div class="main">
+      <h1>items</h1>
+      <div class="group">
+        <div class="product1">
+          <div class="p1">
+          <p>Price: $10.99</p>
+        </div>
+       </div>
+        <div class="product2">
+          <div class="p2">
+          <p>Price: $15.99</p>
+        </div>
+       </div>
+         <div class="product3">
+          <div class="p3">
+          <p>Price: $12.99</p>
+        </div>
+       </div>
+         <div class="product4">
+          <div class="p4">
+          <p>Price: $12.99</p>
+        </div>
+           <div class="p4-stay">
+          <p>Price: $12.99</p>
+        </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+<script id="jsbin-javascript">
+(function() {
+  "use strict";
+  var p = document.querySelector(".product4 .p4");
+  var div = document.createElement("div");
+    div.style.width = "50px";
+    div.style.height = "50px";
+    div.style.position = "absolute";
+    div.style.backgroundColor = "lightblue";
+    div.style.right = "0";
+    div.style.bottom = "0";
+  document.querySelector(".product4").insertBefore(div,p);
+  p.addEventListener("click",function(){
+      div.style.position = "absolute";
+      div.style.right = "455px";
+      div.style.bottom = "240px";
+      div.style.width = "20px";
+      div.style.height = "20px";
+      window.setTimeout(function(){
+        div.style.bottom ="200px";
+        div.style.opacity = "0";
+         window.setTimeout(function(){
+          div.style.display = "none";
+          }, 601);
+      }, 600);
+
+	}, false);
+
+var remove = document.querySelector(".remove");
+      remove.addEventListener("click", function(){
+      	if(div.style.width && div.style.height === "20px"){
+      		document.body.appendChild(document.createTextNode("Hello World"));
+      	}
+	  }, false);
+
+
+}());
+
+
+
+</script>
+</body>
+</html>

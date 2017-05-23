@@ -1,0 +1,217 @@
+
+/*Javascript*/
+.fadeIn {
+width: 320px;
+height: 400px;
+margin-top: -160px;
+transition: 650ms ease-in-out;
+transition: 1950ms ease-out;
+margin-bottom: 250px;
+/*border: 1px solid lightblue;*/
+
+}
+.fadeOut {
+  transition: 1950ms ease-out;
+  width: 320px;
+  height: 400px;
+
+}
+/*Javascript*/
+
+.spaceman{
+width: 130px;
+height: 230px;
+-ms-transform: rotate(25deg); /* IE 9 */
+-webkit-transform: rotate(25deg); /* Chrome, Safari, Opera */
+transform: rotate(25deg);
+margin-top: 5px;
+position: relative;
+}
+
+img:hover{
+  cursor: pointer;
+}
+.facts, .facts-2, .facts-3, .facts-4, .facts-5{
+  width: 220px;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  z-index: -1;
+  position: fixed;
+  opacity: 0;
+}
+#menuToggle, #menuToggle-2 ,#menuToggle-3 ,#menuToggle-4 ,#menuToggle-5{
+display: none;
+}
+#menuToggle:checked ~ .facts{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  height: 300px;
+  width: 300px;
+  border-radius: 8px;
+  opacity: 1;
+  z-index: 3;
+  overflow-y: hidden;
+}
+#menuToggle-2:checked ~ .facts-2{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  height: 300px;
+  width: 300px;
+  border-radius: 8px;
+  opacity: 1;
+  z-index: 3;
+}
+#menuToggle-3:checked ~ .facts-3{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  height: 300px;
+  width: 300px;
+  border-radius: 8px;
+  opacity: 1;
+  z-index: 3;
+}
+#menuToggle-4:checked ~ .facts-4{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  height: 300px;
+  width: 300px;
+  border-radius: 8px;
+  opacity: 1;
+  z-index: 3;
+}
+#menuToggle-5:checked ~ .facts-5{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  height: 300px;
+  width: 300px;
+  border-radius: 8px;
+  opacity: 1;
+  z-index: 3;
+}
+.menu-icon-2{
+color: #fff;
+cursor: pointer;
+}
+.none{
+  display: none;
+}
+body{
+  background-image: url("./img/background.png");
+  margin: 0;
+  padding: 0;
+  background-color: #3B5466;
+  font-family: "open sans";
+  color: #fff;
+  height: 3000px;
+}
+header{
+  text-align: center;
+  position: relative;
+  width: 100%;
+  line-height: 42px
+}
+header h1{
+  font-size: 8em;
+}
+header h2{
+  font-size: 2em;
+}
+.container{
+  width: 100%;
+}
+.planets{
+  text-align: center;
+  margin-top: 200px;
+}
+.p1, .p2, .p3, .p4, .p5{
+  opacity: 0;
+  width: 500px;
+  height: 400px;
+  text-align: center;
+  position: relative;
+  /*margin-top: 420px;*/
+}
+@media screen and (max-width: 400px){
+  #menuToggle:checked ~ .facts,
+  #menuToggle-2:checked ~ .facts-2,
+  #menuToggle-3:checked ~ .facts-3,
+  #menuToggle-4:checked ~ .facts-4,
+  #menuToggle-5:checked ~ .facts-5{
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+  }
+
+}
+@media screen and (max-width: 800px){
+  body{
+    background-image: url("./img/background-2.png");
+  }
+  .spaceman{
+  width: 40px;
+  height: 70px;
+  -ms-transform: rotate(25deg); /* IE 9 */
+  -webkit-transform: rotate(25deg); /* Chrome, Safari, Opera */
+  transform: rotate(25deg);
+  position: relative;
+  }
+}
+@media screen and (max-width: 767px){
+  body{
+    background-color: #3B5466;
+  }
+  .p1, .p2, .p3, .p4, .p5{
+    width: 80%;
+}
+@media screen and (max-width: 767px){
+header h1{
+    font-size: 4em;
+    line-height: 60px;
+  }
+  header h2{
+     font-size: 1em;
+   }
+   img {
+     width: 200px;
+     height: 200px;
+   }
+.s{
+  width: 281px;
+  height: 221px;
+
+}
+
+   .fadeIn, .fadeOut{
+     width: 100%;
+
+   }
+}
