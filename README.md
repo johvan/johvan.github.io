@@ -1,4 +1,4 @@
-# School Web Projects
+# School Portfolio Projects
 
 ```javascript
 let Projects = {
