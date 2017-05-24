@@ -3,7 +3,15 @@
    src: url("fonts/PTsans/PT_Sans-Web-Regular.ttf") format("truetype");
  }
 
+ @font-face {
+   font-family: "PTsans-Bold";
+   src: url("fonts/PTsans/PT_Sans-Web-Bold.ttf") format("truetype");
+ }
 
+ @font-face {
+   font-family: "PTserif";
+   src: url("fonts/PTSerif/PT_Serif-Web-Regular.ttf");
+ }
 
  .dum {
    width: 400px;
