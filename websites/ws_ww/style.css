@@ -8,10 +8,10 @@
    src: url("./fonts/PTsans/PT_Sans-Web-Bold.ttf");
  }
 
- @font-face {
+ /*@font-face {
    font-family: "PTserif";
    src: url("./fonts/PTSerif/PT_Serif-Web-Regular.ttf");
- }
+ }*/
 
  .dum {
    width: 400px;
