@@ -2,11 +2,11 @@
     "use strict";
     var app = {
         suit1:   document.querySelectorAll(".inner .box")[0],
-        product: document.querySelector(".v1 img"),
-        cart: document.querySelector(),
-        item: div({
-           class: "item"
-        })
+        product: document.querySelector(".v1 img")
+        // cart: document.querySelector()
+        // item: div({
+        //    class: "item"
+        // })
     };
 //    console.log(app.suit1);
 //    app.suit1.addEventListener("click", function () {
