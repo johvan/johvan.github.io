@@ -6,13 +6,13 @@ this.addEventListener("install", function(event) {
         caches.open("v1").then(function(cache) {
             // origin-relative urls; Add the resources you want to cache.
             return cache.addAll([
-                "/johvan.github.io/src",
-                "/johvan.github.io/index.html",
-                "/johvan.github.io/style.css",
-                "/johvan.github.io/src/app.js",
-                "/johvan.github.io/src/imgs/img-1.jpg",
-                "/johvan.github.io/src/imgs/img-2.png",
-                "/johvan.github.io/src/imgs/img-3.png"
+                "src",
+                "index.html",
+                "style.css",
+                "src/app.js",
+                "src/img-1.jpg",
+                "src/imgs/img-2.png",
+                "src/imgs/img-3.png"
             ]);
         })
     );
