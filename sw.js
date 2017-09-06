@@ -6,7 +6,7 @@ this.addEventListener("install", function(event) {
         caches.open("v1").then(function(cache) {
             // origin-relative urls; Add the resources you want to cache.
             return cache.addAll([
-                "src",
+                "https://johvan.github.io/src",
                 "index.html",
                 "style.css",
                 "src/app.js",
