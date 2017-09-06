@@ -10,7 +10,7 @@ this.addEventListener("install", function(event) {
                 "index.html",
                 "style.css",
                 "src/app.js",
-                "src/img-1.jpg",
+                "src/imgs/img-1.jpg",
                 "src/imgs/img-2.png",
                 "src/imgs/img-3.png"
             ]);
