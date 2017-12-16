@@ -3,7 +3,7 @@ self.addEventListener("install", function(event) {
     //until the code inside waitUntil() has successfully occurred.
     event.waitUntil(
         // create a new cache. This returns a promise for a created cache;
-        caches.open("v1").then(function(cache) {
+        caches.open("v2").then(function(cache) {
             // origin-relative urls; Add the resources you want to cache.
             return cache.addAll([
                 "index.html",
@@ -33,13 +33,27 @@ self.addEventListener('fetch', function(event) {
           // Next grab the resource from `event.request`, then it is cloned with `response.clone()` and added to the cache. 
           // The clone is put in the cache, and the original response is returned 
           // to the browser to be given to the page that called it.
-          caches.open("v1").then(function(cache) {
+          caches.open("v2").then(function(cache) {
           cache.put(event.request, response.clone());
         });
         return response; 
       }).catch(function(){
           return caches.match("/src/img-1.jpg");
       });
+    })
+  );
+});
+
+self.addEventListener('activate', function(event) {
+  var cacheWhitelist = ['v2'];
+
+  event.waitUntil(
+    caches.keys().then(function(keyList) {
+      return Promise.all(keyList.map(function(key) {
+        if (cacheWhitelist.indexOf(key) === -1) {
+          return caches.delete(key);
+        }
+      }));
     })
   );
 });
