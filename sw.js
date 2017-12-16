@@ -33,8 +33,10 @@ self.addEventListener('fetch', function(event) {
           // Next grab the resource from `event.request`, then it is cloned with `response.clone()` and added to the cache. 
           // The clone is put in the cache, and the original response is returned 
           // to the browser to be given to the page that called it.
+          console.log(response);
+          let responseClone = response.clone();
           caches.open("v2").then(function(cache) {
-          cache.put(event.request, response.clone());
+          cache.put(event.request, responseClone);
         });
         return response; 
       }).catch(function(){
